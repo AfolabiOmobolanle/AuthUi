@@ -4,23 +4,31 @@ import {
   View,
   Image,
   Dimensions,
-  Alert,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import assets, {colors} from '../constants/app.constants';
+import assets, { colors } from '../constants/app.constants';
 import CustomButton from '../Components/CustomButton';
-import LogIn from './LogIn';
+import ClickableText from '../Components/clickable-text';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
-const Landing: React.FC = () => {
-  const onLogIn = () => {};
+const Landing: React.FC = ({ navigation }) => {
+  const onLogIn = () => {
+    // const userDetails = {
+    //   name: "Bola",
+    //   age: 12
+    // }, { user: userDetails }s
+    navigation.navigate("Loginpage");
+  };
 
-  const onRegister = () => {};
+  const onRegister = () => {
+    navigation.navigate("RegisterPage");
 
-  const onContinue = () => {};
+  };
+
+  const onContinue = () => { };
 
   return (
     <View style={styles.container}>
@@ -44,11 +52,11 @@ const Landing: React.FC = () => {
               <TouchableOpacity onPress={onRegister} style={styles.button}>
                 <Text style={styles.btnText}>Register</Text>
               </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.clickableText}
-                onPress={onContinue}>
-                <Text style={styles.guest}>Continue as a guest</Text>
-              </TouchableOpacity>
+              
+
+              <ClickableText text={'Continue as a guest'} color={colors.primary} onPress={onContinue}
+              textAlign={'center'}/>
+            
             </View>
           </View>
         </View>
@@ -105,7 +113,7 @@ const styles = StyleSheet.create({
   guest: {
     marginTop: 20,
     color: colors.primary,
-    fontWeight:'600'
+    fontWeight: '600'
   },
 
   btnText: {

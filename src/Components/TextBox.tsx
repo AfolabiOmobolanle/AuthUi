@@ -23,9 +23,9 @@ export default TextBox
 const styles = StyleSheet.create({
     input: {
         height: 55,
-        borderColor: colors.bglight,
+        borderColor: colors.border,
         borderWidth: 1,
         borderRadius: 6,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
 })

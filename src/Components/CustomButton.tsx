@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
             marginTop: 20,
             height: 48
         },
+        
         buttonText: {
             color: colors.bglight,
             fontSize: 17,

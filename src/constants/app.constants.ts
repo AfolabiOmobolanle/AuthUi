@@ -12,6 +12,7 @@ export const colors ={
     primary:'#35C2C1',
     gray: '#8391A1',
     bglight:'#F7F8F9',
+    border:'#E8ECF4',
 
 
 };
